@@ -189,9 +189,9 @@ with right:
         heat = (cm.jet(cam)[..., :3] * 255).astype(np.uint8)
         overlay = (0.55 * raw_rs + 0.45 * heat).astype(np.uint8)
         c1, c2, c3 = st.columns(3)
-        c1.image(raw_rs, caption="📷 Your photo", use_column_width=True)
-        c2.image((cam * 255).astype(np.uint8), caption="🌡️ AI attention", use_column_width=True)
-        c3.image(overlay, caption="✨ Overlay (red = focus)", use_column_width=True)
+        c1.image(raw_rs, caption="📷 Your photo", use_container_width=True)
+        c2.image((cam * 255).astype(np.uint8), caption="🌡️ AI attention", use_container_width=True)
+        c3.image(overlay, caption="✨ Overlay (red = focus)", use_container_width=True)
 
         st.markdown("<b>📊 How sure is the AI? (all answers on page)</b>", unsafe_allow_html=True)
         st.write("**Step 1 — Healthy or Sick? (2 choices)**")
